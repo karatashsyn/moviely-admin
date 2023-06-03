@@ -12,11 +12,6 @@ import { moviesActions } from './Store'
 import { popularMoviesActions } from './Store'
 const admin = { name: 'Huseyin', surname: 'Karatas', email: 'karatashuseyin2016@gmail.com@gmail.com' }
 function App() {
-  const navigate = useNavigate()
-
-  useEffect(()=>{
-    return navigate('/')
-  })
   const snackBarRef: any = useRef(null)
   const [response, setResponse]: any = useState(null)
   const dispatch = useDispatch()

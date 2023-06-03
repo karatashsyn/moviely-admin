@@ -787,7 +787,16 @@ const initialMoviesState: Array<Movie> =
         "poster": "https://image.tmdb.org/t/p/original//h0Xsy4aomjMO47RpoHv8lnfbkoE.jpg",
         "rating": 7.3,
         "description": "Former cop Brian O'Conner partners with ex-con Dom Toretto on the opposite side of the law. Since Brian and Mia Toretto broke Dom out of custody, they've blown across many borders to elude authorities. Now backed into a corner in Rio de Janeiro, they must pull one last job in order to gain their freedom.",
-        "genres": [],
+        "genres": [{
+            "id": 12,
+            "name": "Adventure",
+            
+        },
+        {
+            "id": 28,
+            "name": "Action",
+            
+        }],
         "owned": true
     },
 ]
