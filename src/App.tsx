@@ -12,6 +12,8 @@ import { moviesActions } from './Store'
 import { popularMoviesActions } from './Store'
 const admin = { name: 'Mehmet', surname: 'Karsu', email: 'mehmetkarsu@gmail.com' }
 function App() {
+  console.log('App started');
+  
   const snackBarRef: any = useRef(null)
   const [response, setResponse]: any = useState(null)
   const dispatch = useDispatch()
