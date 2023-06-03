@@ -99,7 +99,7 @@ function App() {
             <Navbar admin={admin} />
           </div>
           <Routes>
-            <Route index element={<Home addMovie={addMovie} deleteMovie={deleteMovie} addPopular={addPopular} />}></Route>
+            <Route index path='/' element={<Home addMovie={addMovie} deleteMovie={deleteMovie} addPopular={addPopular} />}></Route>
             <Route path="/add" element={<AddMovie addMovie={addMovie} />}></Route>
             <Route path="/movies/:id" element={<EditMovie updateMovie={updateMovie} />}></Route>
           </Routes>
