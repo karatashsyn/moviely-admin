@@ -20,7 +20,7 @@ export default function Navbar({ admin }: props) {
         <div className={styles.heroContainer}>
           <img
             className={styles.heroImg}
-            src="assets\photo-1633332755192-727a05c4013d.jpg"
+            src="https://avatars.githubusercontent.com/u/81769362?v=4"
             alt=""
           />
         </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './Components/NavBar/Navbar'
 import Home from './Pages/Home/Home'
 import Navbar from './Components/NavBar/Navbar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import AddMovie from './Pages/AddMovie/AddMovie'
 import SnackBar from './Components/UI/SnackBar/SnackBar'
 import { useDispatch } from 'react-redux'
@@ -10,10 +10,13 @@ import { Movie } from './Types/Movie'
 import EditMovie from './Pages/EditMovie/EditMovie'
 import { moviesActions } from './Store'
 import { popularMoviesActions } from './Store'
-const admin = { name: 'Mehmet', surname: 'Karsu', email: 'mehmetkarsu@gmail.com' }
+const admin = { name: 'Huseyin', surname: 'Karatas', email: 'karatashuseyin2016@gmail.com@gmail.com' }
 function App() {
-  console.log('App started');
-  
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+    return navigate('/')
+  })
   const snackBarRef: any = useRef(null)
   const [response, setResponse]: any = useState(null)
   const dispatch = useDispatch()
