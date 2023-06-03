@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './Components/NavBar/Navbar'
 import Home from './Pages/Home/Home'
 import Navbar from './Components/NavBar/Navbar'
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import AddMovie from './Pages/AddMovie/AddMovie'
 import SnackBar from './Components/UI/SnackBar/SnackBar'
 import { useDispatch } from 'react-redux'
@@ -99,9 +99,10 @@ function App() {
             <Navbar admin={admin} />
           </div>
           <Routes>
-            <Route index path='/' element={<Home addMovie={addMovie} deleteMovie={deleteMovie} addPopular={addPopular} />}></Route>
+            <Route path='/' element={<Home addMovie={addMovie} deleteMovie={deleteMovie} addPopular={addPopular} />}></Route>
             <Route path="/add" element={<AddMovie addMovie={addMovie} />}></Route>
             <Route path="/movies/:id" element={<EditMovie updateMovie={updateMovie} />}></Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </BrowserRouter>
       </div>
