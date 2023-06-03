@@ -1,0 +1,20 @@
+.gallery {
+  display: grid;
+  aspect-ratio: 28/12;
+  grid-template-columns: repeat(28, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  min-width: 36rem;
+  gap: 10px;
+  transition: opacity 0.2s;
+  margin-top: 24px;
+}
+
+.faded.gallery > * {
+  opacity: 0.48;
+  filter: blur(2.6px);
+}
+
+/* @media screen and (max-width: 769px) {
+  .gallery {
+  }
+} */

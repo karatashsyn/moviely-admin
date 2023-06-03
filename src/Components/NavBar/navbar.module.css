@@ -1,0 +1,165 @@
+*,
+::before,
+::after {
+  /* border: 1px solid rgb(38, 108, 155); */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 264px;
+  height: calc(100vh - 48px);
+}
+
+.mainOptionsContainer {
+  padding: 24px 0;
+  border-top: 1px solid #323232;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.adminContainer {
+  transition: all 0.4s;
+  display: flex;
+  gap: 12px;
+}
+
+.adminFullName {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.adminRole {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #c0c0c0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.option:hover .optionName,
+.logout:hover {
+  color: #d60c0c;
+}
+
+.optionName {
+  font-size: 1.24rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.iconWrapper {
+  width: 42px;
+  height: 26.4px;
+}
+.iconWrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logOutContainer {
+  margin-top: auto;
+  border-top: 1px solid #323232;
+  padding: 16px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.logouticonwrapper {
+  width: 42px;
+  height: 26.4px;
+}
+.logouticonwrapper svg {
+  height: 100%;
+  width: 100%;
+}
+
+.logout {
+  font-size: 1.24rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.heroContainer {
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+}
+.heroImg {
+  border-radius: 50%;
+  max-width: 100%;
+  object-position: center;
+}
+
+.closerContainer {
+  display: none;
+}
+
+@media screen and (max-width: 986px) {
+  .closerContainer {
+    display: block;
+    margin-left: auto;
+    justify-content: end;
+    height: 46px;
+    justify-content: end;
+    align-items: center;
+  }
+  .closerButton {
+    height: 46px;
+    padding: 8px;
+  }
+
+  .closerButton svg {
+    height: 80%;
+    cursor: pointer;
+  }
+
+  .adminContainer {
+    padding: 8px;
+    align-items: center;
+  }
+  .adminContainer .infoContainer,
+  .adminContainer .heroContainer {
+    opacity: 0;
+    pointer-events: 0;
+  }
+  .navbar {
+    gap: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 46px;
+    overflow: hidden;
+    background-color: #0d0c0f;
+  }
+  .opened.adminContainer {
+    position: fixed !important;
+    top: 0 !important;
+  }
+  .opened .adminContainer .infoContainer,
+  .opened .adminContainer .heroContainer {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .navbar.opened {
+    background-color: #292929;
+    height: 80vh;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.4s;
+  }
+
+  .opened .mainOptionsContainer {
+    gap: 32px;
+  }
+}
