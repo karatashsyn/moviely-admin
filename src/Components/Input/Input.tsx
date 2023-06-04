@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, {  useMemo, useState } from 'react'
 import styles from './input.module.css'
 import Info from '../Info/Info'
 type Props = {

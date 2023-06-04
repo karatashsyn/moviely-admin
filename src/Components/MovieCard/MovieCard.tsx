@@ -2,6 +2,11 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Movie } from '../../Types/Movie'
 import styles from './moviecard.module.css'
 import { NavLink } from 'react-router-dom'
+import RateIcon from '../UI/Icons/RateIcon'
+import CheckMarkIcon from '../UI/Icons/CheckMarkIcon'
+import TrashIcon from '../UI/Icons/TrashIcon'
+import EditIcon from '../UI/Icons/EditIcon'
+import PlusIcon from '../UI/Icons/PlusIcon'
 type props = { movie: Movie; deleteMovie: Function; addMovie: Function }
 export default function MovieCard({ movie, deleteMovie, addMovie }: props) {
   const [deleted, setDeleted] = useState(false)
@@ -14,7 +19,6 @@ export default function MovieCard({ movie, deleteMovie, addMovie }: props) {
     if(!added) cardClass +=  ` ${styles.notOwned}`
     return cardClass
   }, [deleted,added])
-  const iconPath =(icon:String)=> process.env.PUBLIC_URL + '/public/assets/' + iconPath
   
 
   const rateClassName = () => {
@@ -26,6 +30,7 @@ export default function MovieCard({ movie, deleteMovie, addMovie }: props) {
   }
 
   useEffect(() => {
+    setId(movie.id)
     const genreNames = movie.genres.map((g: any) => g.name)
     setGenresString(
       genreNames
@@ -83,12 +88,12 @@ export default function MovieCard({ movie, deleteMovie, addMovie }: props) {
     <>
     <div className={cardClassName}>
       <span className={styles.deletedSpan}>DELETED</span>
-        <NavLink to={movie.id? `/movies/${movie.id}`:''}>
+        <NavLink to={id? `/movies/${id}`:''}>
           <img className={styles.poster} src={movie.poster ?? 'assets/NoImageImage2.png'} alt="" />
         </NavLink>
       <div className={styles.ratingBox}>
         <div className={styles.iconContainer}>
-        <img src='assets/rate.svg' alt="Rate Icon" />
+        <RateIcon/>
         </div>
         <div className={rateClassName()}>{movie.rating ?? '--'}</div>
       </div>
@@ -96,24 +101,24 @@ export default function MovieCard({ movie, deleteMovie, addMovie }: props) {
         {added ? (
           <>
             <div className={styles.removeBtn} onClick={handleDelete}>
-              <img src="assets/checkmark.svg" alt="CheckMark" />
-              <img src="assets/trash.svg" alt="Trash" />
+              <CheckMarkIcon/>
+              <TrashIcon/>
             </div>
-            <NavLink to={movie.id? `/movies/${movie.id}`:''}>
+            <NavLink to={id? `/movies/${id}`:''}>
               <div className={styles.editBtn}>
-                <img src='assets/edit.svg' alt="editIcon" />
+                <EditIcon/>
               </div>
             </NavLink>
           </>
         ) : (
           <>
             <div className={styles.addBtn} onClick={handleAdd}>
-              <img src="assets/plus.svg" alt="Add Icon" />
+              <PlusIcon/>
             </div>
           </>
         )}
       </div>
-      <NavLink to={movie.id? `/movies/${movie.id}`:''}>
+      <NavLink to={id? `/movies/${id}`:''}>
       <div className={styles.infoContainer}>
         <h1 className={styles.title}>{movie.title}</h1>
         <div className={styles.genresContainer}>

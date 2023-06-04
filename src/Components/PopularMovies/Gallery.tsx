@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react'
 import styles from './gallery.module.css'
 import PopularCard from './PopularCard'
 import useGetPopulars from '../../Hooks/useGetPopulars'
-import LoadingBox from '../UI/LoadingBox'
+import LoadingBox from '../UI/Icons/LoadingBox'
 //12 Popular Movie
 
 export default function Gallery({ addMovie,addPopular }: any) {

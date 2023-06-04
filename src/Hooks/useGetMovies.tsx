@@ -17,7 +17,9 @@ export default function useGetMovies(title: string) {
       setLoading(true)
       setError(false)
       if(title.length===0){setMovies(descendingMovies)}
-      else{setMovies(descendingMovies.filter((m:Movie)=>regexPattern.test(m.title)))}
+      else{
+        setMovies(movies.filter((m:Movie)=>regexPattern.test(m.title)))
+      }
       
       setLoading(false)
 

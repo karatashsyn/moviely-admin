@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import useShowMovie from '../../Hooks/useShowMovie'
 import styles from './editMovie.module.css'
-import Input from '../../Components/Input/Input'
 import useGetGenres from '../../Hooks/useGetGenres'
 import { Genre } from '../../Types/Genre'
 type Props = {
@@ -13,7 +12,7 @@ export default function EditMovie({ updateMovie }: Props) {
   const { genres } = useGetGenres()
   const params = useParams()
   const navigate = useNavigate()
-  const { movie, error, loading } = useShowMovie(Number(params.id))
+  const { movie } = useShowMovie(Number(params.id))
   const [selectedGenres, setSelectedGenres] = useState<Array<Genre>>([])
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')

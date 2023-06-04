@@ -110,7 +110,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 400ms;
+  transition: 240ms;
   overflow: hidden;
 }
 
@@ -128,9 +128,9 @@
 .addBtn:hover {
   background-color: #3c3c3c;
 }
-.removeIcon,
-.addedIcon {
-  transition: 400ms;
+
+.removeBtn svg
+{  transition: 400ms;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -138,30 +138,25 @@
   width: 50%;
 }
 
-.removeIcon {
+.removeBtn svg:nth-of-type(2) {
   left: -25%;
 }
 
-.removeBtn:hover .removeIcon {
+.removeBtn:hover svg:nth-of-type(2) {
   left: 50%;
 }
-.removeBtn:hover .addedIcon {
+.removeBtn:hover svg:nth-of-type(1) {
   left: 150%;
 }
+
 
 .editBtn {
   background-color: #292929;
 }
 .editBtn:hover {
-  background-color: #2e2e2e;
-}
-.editIcon {
-  transition: 240ms;
+  background-color: #616161;
 }
 
-.editBtn:hover .editIcon {
-  transform: rotateZ(180deg);
-}
 
 .infoContainer {
   padding: 0 14px;
@@ -189,9 +184,6 @@
   overflow-y: scroll;
 }
 
-.editMode {
-  /* transform: translateX(50px); */
-}
 
 .shadow {
   height: 0%;

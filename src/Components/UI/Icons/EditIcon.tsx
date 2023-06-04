@@ -1,5 +1,8 @@
- <svg
-                  className={styles.editIcon}
+import React from 'react'
+export default function EditIcon() {
+  return (
+   
+    <svg
                   width="72"
                   height="66"
                   viewBox="0 0 72 66"
@@ -20,3 +23,6 @@
                     strokeWidth="4"
                   />
 </svg>
+   
+  )
+}
