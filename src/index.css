@@ -28,22 +28,22 @@ a {
 }
 
 html::-webkit-scrollbar {
-  width: 4px; /* Width of the scrollbar */
+  width: 3px; 
   
 }
 
 html::-webkit-scrollbar-track {
-  background-color: transparent; /* Background color of the scrollbar track */
+  background-color: transparent; 
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: #910303;; /* Color of the scrollbar thumb */
-  border-radius: 4px; /* Border radius of the scrollbar thumb */
+  background-color: #910303;; 
+  border-radius: 4px; 
   margin-top: 12px;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background-color: #7f0000; /* Color of the scrollbar thumb on hover */
+  background-color: #7f0000; 
 }
 
 @media screen and (max-width: 986px) {

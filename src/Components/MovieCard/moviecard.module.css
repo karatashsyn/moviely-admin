@@ -9,6 +9,7 @@
   box-sizing: border-box;
 }
 
+
 .deleted {
   pointer-events: none;
   opacity: 0.4;
@@ -44,13 +45,13 @@
 }
 
 .card {
-  /* max-width: 320px; */
   aspect-ratio: 0.72;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
   transition: all 0.4s;
 }
+
 .card:hover {
   scale: 1.04;
   box-shadow: 0 8px 24px -2px rgb(23, 23, 23);
@@ -168,6 +169,10 @@
   bottom: -90px;
   z-index: 1;
 }
+.notOwned .poster, .notOwned .infoContainer{
+  cursor: default;
+}
+
 .title {
   padding-bottom: 4px;
   font-size: 2rem;

@@ -2,8 +2,6 @@ import { configureStore, createSlice } from "@reduxjs/toolkit"
 import { Movie } from "../Types/Movie"
 
 const initialMoviesState: Array<Movie> = 
-
-
 [
  
    

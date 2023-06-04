@@ -8,8 +8,8 @@ import LoadingDots from '../../Components/UI/LoadingDots'
 
 export default function Home({ addMovie, deleteMovie, addPopular }: any) {
   const [searchKey, setSearchKey] = useState('')
-  const { movies, loading } = useGetMovies(searchKey)
-
+  const { movies, loading } = useGetMovies(searchKey) 
+  
   return (
     <div className={styles.moviesSection}>
       <div className={styles.searchbarContainer}>
@@ -29,6 +29,8 @@ export default function Home({ addMovie, deleteMovie, addPopular }: any) {
           {!searchKey && <h1 className={styles.myMoviesHeading}>My Movies</h1>}
           <div className={styles.myMoviesContainer}>
             {movies.map((m) => {
+              console.log(m.title);
+              
               return (
                 <MovieCard key={m.id} movie={m} deleteMovie={deleteMovie} addMovie={addMovie} />
               )
