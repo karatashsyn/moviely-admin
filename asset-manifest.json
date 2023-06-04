@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/moviely-admin-ghp/static/css/main.63193c47.css",
-    "main.js": "/moviely-admin-ghp/static/js/main.d14405a9.js",
+    "main.css": "/moviely-admin-ghp/static/css/main.e1656ee5.css",
+    "main.js": "/moviely-admin-ghp/static/js/main.e378bd73.js",
     "static/js/787.f52e2f21.chunk.js": "/moviely-admin-ghp/static/js/787.f52e2f21.chunk.js",
     "index.html": "/moviely-admin-ghp/index.html",
-    "main.63193c47.css.map": "/moviely-admin-ghp/static/css/main.63193c47.css.map",
-    "main.d14405a9.js.map": "/moviely-admin-ghp/static/js/main.d14405a9.js.map",
+    "main.e1656ee5.css.map": "/moviely-admin-ghp/static/css/main.e1656ee5.css.map",
+    "main.e378bd73.js.map": "/moviely-admin-ghp/static/js/main.e378bd73.js.map",
     "787.f52e2f21.chunk.js.map": "/moviely-admin-ghp/static/js/787.f52e2f21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63193c47.css",
-    "static/js/main.d14405a9.js"
+    "static/css/main.e1656ee5.css",
+    "static/js/main.e378bd73.js"
   ]
 }
