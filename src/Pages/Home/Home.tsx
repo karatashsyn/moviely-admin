@@ -30,7 +30,6 @@ export default function Home({ addMovie, deleteMovie, addPopular }: any) {
           {!searchKey && <h1 className={styles.myMoviesHeading}>My Movies</h1>}
           <div className={styles.myMoviesContainer}>
             {movies.map((m:Movie) => {
-              console.log('from the map'+ m.title);
               return (
               <>
                 <MovieCard key={m.id} movie={m} deleteMovie={deleteMovie} addMovie={addMovie} />
